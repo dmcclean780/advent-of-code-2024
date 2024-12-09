@@ -13,8 +13,7 @@ def can_form_target(sequence, target, current=0, index=0):
     num = sequence[index]
     
     return (can_form_target(sequence, target, current + num, index + 1) or
-            can_form_target(sequence, target, current * num if current != 0 else num, index + 1) or
-            can_form_target(sequence, target, int(str(current) + str(num)) if current != 0 else num, index + 1))
+            can_form_target(sequence, target, current * num if current != 0 else num, index + 1))
 total=0
 for i in range(len(input)):
     result = input[i][0]
